@@ -63,8 +63,23 @@
                         ?>
                      </span>
                   </p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(78,78,78,1);">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(78,78,78,1);"> A maecenas quisque scelerisque dis. Laoreet faucibus, eros vestibulum nisl inceptos cum risus arcu ac sollicitudin tortor. Eleifend. Metus at felis ut sagittis duis dis sociosqu dui aptent Dictumst risus diam augue hymenaeos ut congue quisque. Feugiat luctus ultricies cras tempus. </span></p>
+                  <!-- logika untuk memanggil data perkembangan sesuai dengan usia -->
+                  <?php 
+                        $usiasaatini = $diff->m ;
+                     $data = mysqli_query ($koneksi, " select * from perkembangan where usia='$usiasaatini'");
+                     $pkm  = mysqli_fetch_array ($data);
+                     // $tgl  = $pkm['tanggal_lahir'];
+
+
+
+                  ?>
+                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;">
+                  <span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(78,78,78,1);">
+                     <?php echo $pkm['t_kembang']; ?>
+                     
+                  </span>
+                  </p>
+                  
                </div>
                <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
                <div style="clear:both;"></div>
@@ -77,14 +92,28 @@
             <div class="ttr_Media_html_column10">
                <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
                <div class="html_content">
-                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Perkembangan</span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget</span></p>
-                  <p style="margin:2.14em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-size:1.429em;color:rgba(255,255,255,1);">1. Vestibulum Pulvinarsed</span></p>
-                  <p style="margin:0em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);"> Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. </span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-size:1.429em;color:rgba(255,255,255,1);">2. Curabitur lacinia tristique </span></p>
-                  <p style="margin:0em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet. </span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-size:1.429em;color:rgba(255,255,255,1);">3. Pellentesque ornare </span></p>
-                  <p style="margin:0em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac..</span></p>
+                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Perkembangan sensori</span></p>
+                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">
+                  <?php echo $pkm['t_sensori']; ?>   
+                  </span>
+                  </p>
+
+                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Perkembangan Kognitif</span></p>
+                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">
+                  <?php echo $pkm['t_kognitif']; ?>   
+                  </span>
+                  </p>
+
+                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Perkembangan emosional dan sosial</span></p>
+                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">
+                  <?php echo $pkm['t_emosi_sosial']; ?>   
+                  </span>
+                  </p>
+                  
+
+                  
+
+
                </div>
                <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
                <div style="clear:both;"></div>
@@ -109,14 +138,17 @@
             <div class="ttr_Media_html_column10">
                <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
                <div class="html_content">
-                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Sering Di Alami</span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget</span></p>
-                  <p style="margin:2.14em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-size:1.429em;color:rgba(255,255,255,1);">1. Vestibulum Pulvinarsed</span></p>
-                  <p style="margin:0em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);"> Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. </span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-size:1.429em;color:rgba(255,255,255,1);">2. Curabitur lacinia tristique </span></p>
-                  <p style="margin:0em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet. </span></p>
-                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-size:1.429em;color:rgba(255,255,255,1);">3. Pellentesque ornare </span></p>
-                  <p style="margin:0em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac..</span></p>
+                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Perkembangan Kemapuan</span></p>
+                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">
+                  <?php echo $pkm['t_kemampuan']; ?>   
+                  </span>
+                  </p>
+
+                  <p><span style="font-family:'Lemon','Arial';font-size:2.571em;color:rgba(255,255,255,1);">Perkembangan apa yang sering terjadi</span></p>
+                  <p style="margin:1.43em 0em 0.36em 0em;line-height:1.69014084507042;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">
+                  <?php echo $pkm['t_terjadi']; ?>   
+                  </span>
+                  </p>
                </div>
                <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
                <div style="clear:both;"></div>

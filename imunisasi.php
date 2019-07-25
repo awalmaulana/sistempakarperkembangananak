@@ -207,10 +207,10 @@
                                  <input type="text"  name="tb" placeholder="Tinggi Badan Bayi" <?php if ($tb != null): ?>
                                    value="<?php echo $mnt['TB']; ?>"                                      
                                  <?php endif ?>>
-                                   <label>Asi Eksklusif</label>
-                                 <input type="text"  name="asi" placeholder="ASI Exclusive" <?php if ($asi != null): ?>
-                                   value="<?php echo $mnt['asi']; ?>"                                      
-                                 <?php endif ?>>
+                                  
+                                 <input type="checkbox"  name="asi" placeholder="ASI Exclusive" <?php if ($asi != null): ?>
+                                   value="<?php echo $mnt['asi']; ?>" checked                                      
+                                 <?php endif ?> unchecked>  <label>Asi Eksklusif</label>
                                
                                  <input type="submit" name="submit" value="Submit">
                               </form>
