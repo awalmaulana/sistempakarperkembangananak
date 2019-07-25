@@ -24,7 +24,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-lg-12">
-                        <h1 style="text-align: center;">Gejala Yang Dirasakan </h1>
+                        <h1 style="text-align: center;">Gejala Yang Dirasakan Bayi</h1>
                      </div>
                      <form name="form1" method="post" action="output.php">
                         <br>
@@ -34,7 +34,7 @@
                                  <div align="center">
                                     <strong>
                                        <font size="2" face="Arial, Helvetica, sans-serif">
-                                          <h4>G e j a l a</h4>
+                                          <h4>G e j a l a-P a d a-B a y i</h4>
                                        </font>
                                     </strong>
                                  </div>

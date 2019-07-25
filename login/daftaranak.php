@@ -77,7 +77,7 @@
                 gender = '$gender',
                 BB = '',
                 TB = '',
-                asi = ''
+                asi = '',
                 user = '$usr'
                 ";
         
